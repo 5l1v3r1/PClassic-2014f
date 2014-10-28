@@ -22,6 +22,12 @@ So far, I have created APIs for the following:
    * Linear system of equation solver
    * 3D vector utilities
    * Polynomial containment; triangle containment
+   * Primality test
+   * Factorizor
  * Parsing
    * Roman numerals
    * Polynomials
+ * Algorithms
+   * Breadth-first search
+   * Depth-first search
+   * Levenshtein distance
