@@ -26,6 +26,7 @@ So far, I have created APIs for the following:
    * Factorizor
    * Discrete logs
    * Fibonacci numbers
+   * Exponents in modular fields
  * Parsing
    * Roman numerals
    * Polynomials
