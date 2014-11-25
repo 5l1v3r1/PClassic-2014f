@@ -8,6 +8,7 @@ So far, I have created APIs for the following:
 
  * Math
    * GCD (Greatest Common Divisor).
+   * LCM (Least Common Multiple).
    * Vector2
      * Dot products; magnitudes; subtraction and addition
      * Vector projection
@@ -15,7 +16,6 @@ So far, I have created APIs for the following:
 # TODO:
 
  * Math
-   * LCM (Least common multiple)
    * EEA (Extended Euclidean Algorithm)
    * Polynomial root finder
    * Primitive bigints
