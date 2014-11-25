@@ -24,10 +24,14 @@ So far, I have created APIs for the following:
    * Polynomial containment; triangle containment
    * Primality test
    * Factorizor
+   * Discrete logs
+   * Fibonacci numbers
  * Parsing
    * Roman numerals
    * Polynomials
+   * Time of day & dates
  * Algorithms
    * Breadth-first search
    * Depth-first search
    * Levenshtein distance
+   * Knapsack problem
