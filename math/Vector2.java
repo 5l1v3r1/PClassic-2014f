@@ -94,6 +94,7 @@ class Vector2 {
     double diff = (result - res);
     if (diff < -0.0001 || diff > 0.0001) {
       System.out.println(v1 + "*" + v2 + " = " + result + ", but got " + res);
+      System.exit(1);
     }
   }
   
@@ -105,6 +106,7 @@ class Vector2 {
         diffY > 0.0001) {
       System.out.println(v1 + ".project(" + v2 + ") = " + v3 + ", but got " +
           proj);
+      System.exit(1);
     }
   }
   
@@ -114,6 +116,7 @@ class Vector2 {
     if (diff < -0.0001 || diff > 0.0001) {
       System.out.println(v1 + ".magnitude() = " + magnitude + ", but got " + 
           got);
+      System.exit(1);
     }
   }
   

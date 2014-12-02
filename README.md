@@ -13,6 +13,7 @@ So far, I have created APIs for the following:
      * Dot products; magnitudes; subtraction and addition
      * Vector projection
    * Factorizor
+   * Exponents in modular fields
 
 # TODO:
 
@@ -22,11 +23,10 @@ So far, I have created APIs for the following:
    * Primitive bigints
    * Linear system of equation solver
    * 3D vector utilities
-   * Polynomial containment; triangle containment
+   * Polygon containment; triangle containment
    * Primality test
    * Discrete logs
    * Fibonacci numbers
-   * Exponents in modular fields
  * Parsing
    * Roman numerals
    * Polynomials

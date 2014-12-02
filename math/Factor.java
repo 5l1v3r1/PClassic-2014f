@@ -59,6 +59,7 @@ class Factor {
     if (res != factor) {
       System.out.println("expected smallestPrimeFactor(" + num + ") to be " +
         factor + " got " + res);
+      System.exit(1);
     }
   }
 
@@ -67,13 +68,13 @@ class Factor {
     if (res.length != factors.length) {
       System.out.println("expected factorize(" + num + ") to be " +
         factors + " but got " + res);
-      return;
+      System.exit(1);
     }
     for (int i = 0; i < res.length; ++i) {
       if (res[i] != factors[i]) {
         System.out.println("expected factorize(" + num + ") to be " +
           factors + " but got " + res);
-        return;
+        System.exit(1);
       }
     }
   }
