@@ -19,20 +19,24 @@ So far, I have created APIs for the following:
 
  * Math
    * EEA (Extended Euclidean Algorithm)
+     * Diophantine equation solver
+   * Pythagorian triples
    * Polynomial root finder
-   * Primitive bigints
    * Linear system of equation solver
    * 3D vector utilities
    * Polygon containment; triangle containment
    * Primality test
    * Discrete logs
    * Fibonacci numbers
+   * Gamma function
  * Parsing
    * Roman numerals
    * Polynomials
    * Time of day & dates
+   * Two-dimensional structures
  * Algorithms
    * Breadth-first search
    * Depth-first search
    * Levenshtein distance
    * Knapsack problem
+   * Binary search
