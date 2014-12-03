@@ -14,12 +14,12 @@ So far, I have created APIs for the following:
      * Vector projection
    * Factorizor
    * Exponents in modular fields
+   * EEA (Extended Euclidean Algorithm)
+     * Linear diophantine equation solver
 
 # TODO:
 
  * Math
-   * EEA (Extended Euclidean Algorithm)
-     * Diophantine equation solver
    * Pythagorian triples
    * Polynomial root finder
    * Linear system of equation solver
