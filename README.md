@@ -13,7 +13,10 @@ So far, I have created APIs for the following:
      * Dot products; magnitudes; subtraction and addition
      * Vector projection
    * Factorizor
-   * Exponents in modular fields
+   * Arithmetic in modular fields without BigInteger
+     * Modular addition
+     * Modular multiplication
+     * Modular exponentiation
    * EEA (Extended Euclidean Algorithm)
      * Linear diophantine equation solver
 
