@@ -27,14 +27,18 @@ So far, I have created APIs for the following:
    * Polynomial root finder
    * Linear system of equation solver
    * 3D vector utilities
-   * Polygon containment; triangle containment
-   * Primality test
+   * Polygon utilities
+     * Containment
+     * Area
+     * Perimeter
+   * Probabilistic primality test
    * Discrete logs
    * Fibonacci numbers
    * Gamma function
  * Parsing
    * Roman numerals
    * Polynomials
+     * Polynomial long division
    * Time of day & dates
    * Two-dimensional structures
  * Algorithms
