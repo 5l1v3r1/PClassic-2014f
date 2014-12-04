@@ -19,6 +19,8 @@ So far, I have created APIs for the following:
      * Modular exponentiation
    * EEA (Extended Euclidean Algorithm)
      * Linear diophantine equation solver
+   * Convex polygon utilities
+     * Containment
 
 # TODO:
 
@@ -27,7 +29,10 @@ So far, I have created APIs for the following:
    * Polynomial root finder
    * Linear system of equation solver
    * 3D vector utilities
-   * Polygon utilities
+   * Convex polygon utilities
+     * Area
+     * Perimeter
+   * Concave polygon utilities
      * Containment
      * Area
      * Perimeter

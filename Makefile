@@ -1,5 +1,6 @@
 SOURCES=$(wildcard */*.java)
 RESULTS=$(SOURCES:%.java=%.class)
+ALLRESULTS=$(SOURCES:%.java=%*.class)
 
 .PHONY: all clean
 
@@ -9,4 +10,4 @@ all: $(RESULTS)
 	javac $<
 
 clean:
-	$(RM) -r $(RESULTS)
+	$(RM) -r $(ALLRESULTS)
