@@ -47,3 +47,6 @@ So far, I have created APIs for the following:
    * Levenshtein distance
    * Knapsack problem
    * Binary search
+   * Permutations
+     * Permutation parity
+     * Cycle breakdown
