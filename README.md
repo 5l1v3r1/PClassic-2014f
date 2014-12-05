@@ -12,6 +12,7 @@ So far, I have created APIs for the following:
    * Vector2
      * Dot products; magnitudes; subtraction and addition
      * Vector projection
+     * 2x2 systems of equations
    * Factorizor
    * Arithmetic in modular fields without BigInteger
      * Modular addition
@@ -40,6 +41,12 @@ So far, I have created APIs for the following:
    * Discrete logs
    * Fibonacci numbers
    * Gamma function
+   * BigInt
+     * Numerical base parsing
+     * Addition
+     * Multiplication
+     * Division
+     * Subtraction
  * Parsing
    * Roman numerals
    * Polynomials
