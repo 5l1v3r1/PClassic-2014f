@@ -1,0 +1,94 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+
+public class Concert {
+    // Before submitting, make sure the main method hasn't been changed!
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader
+            ("/Users/alex/Downloads/questions/ConcertIN.txt"));
+
+        while (br.ready()) {
+            String base = br.readLine();
+            String height = br.readLine();
+            String[] pillars = br.readLine().split(" ");
+            double[] pillarDoubles = new double[pillars.length];
+            for (int i = 0; i < pillars.length; i++) {
+                pillarDoubles[i] = Double.parseDouble(pillars[i]);
+            }
+
+            System.out.println(computeSeatingCapacity(
+                Double.parseDouble(base),
+                Double.parseDouble(height),
+                pillarDoubles
+            ));
+        }
+    }
+
+    // Fill out the body of this method
+    public static int computeSeatingCapacity(double base, double height, double[] pillars) {
+    	double sum = 0.0;
+    	for (int i = 0; i < pillars.length; i += 3) {
+    		double x1 = pillars[i];
+    		double x2 = pillars[i + 1];
+    		double y = pillars[i + 2];
+    		sum += computeBlockedArea(base, height, x1, x2, y);
+    	}
+    	double bigArea = height * base / 2;
+    	double remaining = bigArea - sum;
+    	remaining *= 21;
+    	int roundedDown = (int)remaining;
+    	
+        return (int)(remaining * 21);
+    }
+    
+    public static double computeBlockedArea(double base, double height, double x1, double x2, double y) {
+    	if (x1 > x2) {
+    		return computeBlockedArea(base, height, x2, x1, y);
+    	}
+    	if (x1 < base / 2 && x2 > base / 2) {
+    		return computeBlockedArea(base, height, x1, base / 2, y) +
+    				computeBlockedArea(base, height, base / 2, x2, y);
+    	}
+    	if (x2 <= base / 2) {
+    		double diff1 = base / 2 - x2;
+    		double diff2 = base / 2 - x1;
+    		return computeBlockedArea(base, height, base / 2 + diff1, base / 2 + diff2, y);
+    	}
+    	double[] p1 = pointOfIntersection(base, height, x1, y);
+    	double[] p2 = pointOfIntersection(base, height, x2, y);
+    	double[] start = new double[] {base / 2, 0.0};
+    	double[] platform1 = new double[] {x1, y};
+    	double[] platform2 = new double[] {x2, y};
+    	double res = triangleArea(start, p1, p2) - triangleArea(start, platform1, platform2);
+    	return res;
+    }
+    
+    public static double[] pointOfIntersection(double base, double height, double x, double y) {
+    	if (Math.abs(x - base / 2) < 0.00001) {
+    		return new double[] {base / 2, height};
+    	}
+    	double slope = (y) / (x - base / 2);
+    	double yint = -slope*(base / 2);
+    	double triangleSlope = -height / (base / 2);
+    	double triangleYint = height * 2;
+    	double gotX = (triangleYint - yint) / (slope - triangleSlope);
+    	double gotY = slope*gotX + yint;
+    	return new double[] {gotX, gotY};
+    }
+    
+    public static double distance(double[] p1, double p2[]) {
+    	double sum = Math.pow(p1[0] - p2[0], 2) + Math.pow(p1[1] - p2[1], 2);
+    	return Math.sqrt(sum);
+    }
+    
+    public static double triangleArea(double[] p1, double[] p2, double[] p3) {
+    	double s1 = distance(p1, p2);
+    	double s2 = distance(p2, p3);
+    	double s3 = distance(p3, p1);
+    	double semi = (s1 + s2 + s3) / 2;
+    	double prod = semi * (semi - s1) * (semi - s2) * (semi - s3);
+    	return Math.sqrt(prod);
+    }
+}

@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+/Users/alex/Desktop/pclassic-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3825754651.index
+1793713634.index
+535790532.index
+3990440485.index
+760724441.index
+2260948775.index
+2622510319.index

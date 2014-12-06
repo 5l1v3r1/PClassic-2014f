@@ -1,0 +1,51 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+
+public class PenguinByNorthPenguin {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader (
+				new FileReader ("PenguinByNorthPenguinIN.txt"));
+		
+		while (br.ready()) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			double dir = Double.parseDouble(st.nextToken());
+			double tolerance = Double.parseDouble(st.nextToken());
+			System.out.println(getDirection(dir, tolerance));
+		}
+		
+		br.close();
+	}
+
+    public static String getDirection(double dir, double tolerance) {
+    	
+    	if (dir == 0.0) {
+    		return "N";
+    	} else if (dir == 90.0) {
+    		return "E";
+    	} else if (dir == 180.0) {
+    		return "S";
+    	} else if (dir == 270.0) {
+    		return "W";
+    	}
+    	double gotten = 0.0;
+    	if (dir <= 90.0 || dir >= 270.0) {
+    		gotten = 0.0; 
+    		// Top hemisphere
+    	} else {
+    		// Bottom hemisphere
+    	}
+    }
+    
+    public static double modulusAngle(double angle) { 
+    	while (dir < 0.0) {
+    		dir += 360.0;
+    	}
+    	while (dir >= 360.0) {
+    		dir -= 360.0;
+    	}
+    }
+}
