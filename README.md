@@ -2,6 +2,8 @@
 
 I am preparing for the 2014 fall [PClassic](http://pclassic.org) competition by implementing some useful math utilities in Java. Some of the stuff I'm implementing would have really come in handy [last year](https://github.com/unixpickle/PClassic-2013f).
 
+**UPDATE**: checkout my [writeup](writeup.md) for this event.
+
 # What's included
 
 So far, I have created APIs for the following:
