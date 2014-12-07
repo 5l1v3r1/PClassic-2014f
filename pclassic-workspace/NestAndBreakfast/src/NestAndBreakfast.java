@@ -46,7 +46,8 @@ public class NestAndBreakfast {
 			return heuristic[start];
 		}
 		// start at every point
-		for (int first = start; first < reservations.length; ++first) {
+		for (int first = start; first < reservations.length && first < start + 4;
+         ++first) {
 			long potentialSum = (long)reservations[first];
 			potentialSum += recursiveSum(reservations, heuristic, first + 2);
 			if (potentialSum > sum) {
